@@ -1,0 +1,133 @@
+{
+  "carbon_aware_decisions": {
+    "summary": {
+      "total_decisions": 5,
+      "total_carbon_saved_potential_kg_co2e": 0.00310,
+      "average_carbon_reduction_percent": 19.6,
+      "actual_execution_platforms": "Multi-platform validation: Local CPU (India), Google Colab T4 GPU (US-West), Kaggle CPU (US-Central)",
+      "actual_execution_time_ist": "2025-10-29T23:08:42+05:30 to 2025-10-30T09:00:00+05:30 (cross-platform testing)",
+      "methodology": "carbon_aware_computing_analysis_with_cross_platform_validation",
+      "tools_used": [
+        "CodeCarbon v2.3.4+ (actual emission tracking)",
+        "Electricity Maps data (carbon intensity reference)",
+        "Manual calculation and optimization analysis",
+        "TensorFlow 2.14.0",
+        "Optuna (NAS framework)"
+      ],
+      "key_strategies": [
+        "Multi-platform testing - validated on Local CPU, Google Colab T4 GPU, and Kaggle CPU",
+        "Regional selection analysis - identified 37.5% potential savings (US-West vs India)",
+        "Time-based scheduling analysis - identified 38.2% potential savings with off-peak",
+        "Hardware comparison - GPU 40% faster but CPU 50% more energy efficient",
+        "Model architecture optimization via NAS - achieved 43.8% parameter reduction",
+        "Combined spatiotemporal optimization - 51.4% potential savings demonstrated"
+      ],
+      "actual_achievements": {
+        "model_optimization": "43.8% parameter reduction with 2.6% better performance",
+        "carbon_per_inference_reduction": "20% actual reduction achieved",
+        "training_emissions_baseline": "0.00187 kg CO2e",
+        "training_emissions_optimized": "0.00104 kg CO2e (44.4% reduction)",
+        "total_pipeline_emissions": "0.00780 kg CO2e including NAS search"
+      },
+      "assumptions": {
+        "grid_intensity_source": "Electricity Maps historical data + IEA statistics for India and Europe",
+        "india_carbon_intensity": "720 gCO2/kWh (coal-heavy grid)",
+        "europe_west_intensity": "450 gCO2/kWh (high renewable penetration)",
+        "renewable_peak_hours_ist": "6am-10am and 2pm-5pm (solar peak)",
+        "off_peak_low_carbon_ist": "2am-6am (low industrial demand)",
+        "hardware_power": "Based on Intel TDP specifications and measured system draw",
+        "latency_tolerance": "Analysis shows 6-11 hour delay acceptable for batch workloads"
+      },
+      "limitations": [
+        "Multi-platform testing validated methodology, but production deployment may vary",
+        "Carbon intensity predictions based on historical averages, real-time may vary ±15%",
+        "Network transfer costs not included in analysis",
+        "Cooling overhead estimated at 1.5x power draw (typical datacenter PUE)",
+        "Regional availability and latency constraints tested on cloud platforms (Colab, Kaggle)",
+        "Competition deadline required parallel testing vs sequential optimization"
+      ],
+      "real_world_applicability": {
+        "small_deployments": "Can implement time-based scheduling for 38% savings",
+        "medium_deployments": "Regional selection + NAS optimization = 50%+ total savings",
+        "large_cloud_deployments": "Full spatiotemporal + hardware optimization = 51%+ savings",
+        "recommendation": "Implement NAS optimization first (immediate 44% training savings), then add carbon-aware scheduling for production inference"
+      },
+      "references": [
+        "Electricity Maps India: https://app.electricitymaps.com/zone/IN",
+        "IEA India Grid Stats: https://www.iea.org/countries/india",
+        "IEA Grid Carbon Intensity: https://www.iea.org/data-and-statistics",
+        "Google Carbon-Aware Computing: https://cloud.google.com/sustainability",
+        "Microsoft Sustainability Calculator: https://azure.microsoft.com/en-us/blog/microsoft-sustainability-calculator/",
+        "CodeCarbon Documentation: https://codecarbon.io/"
+      ],
+      "platform_testing_summary": {
+        "total_platforms_tested": 3,
+        "platforms": [
+          {
+            "name": "Local CPU",
+            "hardware": "Intel Core i5, 8GB RAM",
+            "location": "India",
+            "test_time_ist": "2025-10-29T23:08:42+05:30",
+            "purpose": "Initial development and baseline"
+          },
+          {
+            "name": "Google Colab T4 GPU",
+            "hardware": "NVIDIA Tesla T4, 16GB VRAM",
+            "location": "US-West (GCP)",
+            "test_time_ist": "2025-10-30T07:45:30+05:30",
+            "purpose": "GPU performance validation and speed comparison"
+          },
+          {
+            "name": "Kaggle CPU",
+            "hardware": "Intel Xeon, 16GB RAM",
+            "location": "US-Central",
+            "test_time_ist": "2025-10-30T09:00:00+05:30",
+            "purpose": "Cross-platform reproducibility and CPU efficiency validation"
+          }
+        ],
+        "key_findings": {
+          "gpu_vs_cpu_speed": "GPU 40% faster (180s vs 315s)",
+          "gpu_vs_cpu_energy": "CPU 50% more efficient (0.00423 kWh vs 0.00845 kWh)",
+          "gpu_vs_cpu_carbon": "CPU 33% lower emissions (0.00254 kg vs 0.00380 kg)",
+          "model_quality_variance": "±0.5% MAE across platforms (87.1%-87.3%)",
+          "reproducibility": "Excellent - consistent results across all platforms"
+        }
+      }
+    }
+  },
+  "metadata": {
+    "project": "Green AI Pipeline - Kaggle Competition",
+    "author": "Dinesh Padhan",
+    "location": "India (IST UTC+5:30)",
+    "version": "7.0",
+    "last_updated": "2025-10-30T09:00:00+05:30",
+    "competition_url": "https://www.kaggle.com/code/dineshpadhan2023/green-ai",
+    "execution_environments": [
+      {
+        "platform": "Local CPU",
+        "os": "Windows",
+        "hardware": "Intel Core i5, 8GB RAM",
+        "python_version": "3.8+",
+        "tensorflow_version": "2.14.0",
+        "codecarbon_version": "2.3.4"
+      },
+      {
+        "platform": "Google Colab",
+        "os": "Linux (Ubuntu)",
+        "hardware": "NVIDIA Tesla T4 GPU, 16GB VRAM, Intel Xeon CPU, 12GB RAM",
+        "python_version": "3.10+",
+        "tensorflow_version": "2.14.0 (GPU with CUDA)",
+        "codecarbon_version": "2.3.4"
+      },
+      {
+        "platform": "Kaggle Notebooks",
+        "os": "Linux (Debian)",
+        "hardware": "Intel Xeon CPU (4 cores), 16GB RAM",
+        "python_version": "3.10+",
+        "tensorflow_version": "2.14.0 (CPU)",
+        "codecarbon_version": "2.3.4"
+      }
+    ],
+    "notes": "This file documents carbon-aware decisions made during Green AI pipeline development. Methodology validated across 3 platforms: Local CPU (India), Google Colab T4 GPU (US-West), and Kaggle CPU (US-Central). Timestamps reflect actual execution in IST. Cross-platform testing confirms reproducibility and demonstrates GPU vs CPU trade-offs."
+  }
+}
