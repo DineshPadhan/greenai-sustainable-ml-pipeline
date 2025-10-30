@@ -405,8 +405,8 @@ To reproduce these measurements:
 
 ```bash
 # Clone repository
-git clone https://github.com/yourusername/green-ai-pipeline.git
-cd green-ai-pipeline
+git clone https://github.com/DineshPadhan/greenai-sustainable-ml-pipeline
+cd greenai-sustainable-ml-pipeline
 
 # Install dependencies
 pip install -r requirements.txt

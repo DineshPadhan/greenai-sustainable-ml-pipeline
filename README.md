@@ -71,8 +71,8 @@ optuna (optional, for advanced NAS)
 
 1. **Clone the repository**:
 ```bash
-git clone https://github.com/yourusername/green-ai-pipeline
-cd green-ai-pipeline
+git clone https://github.com/DineshPadhan/greenai-sustainable-ml-pipeline
+cd greenai-sustainable-ml-pipeline
 ```
 
 2. **Install dependencies**:
